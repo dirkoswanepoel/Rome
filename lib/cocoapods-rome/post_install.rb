@@ -20,6 +20,7 @@ def build_for_iosish_platform(sandbox, build_dir, target, device, simulator, con
 
     next unless File.file?(device_lib) && File.file?(simulator_lib)
 
+    `lipo -remove arm64 #{simulator_lib} -output #{simulator_lib}`
     lipo_log = `lipo -create -output #{executable_path} #{device_lib} #{simulator_lib}`
     puts lipo_log unless File.exist?(executable_path)
 
