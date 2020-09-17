@@ -6,7 +6,7 @@ require 'cocoapods-rome/gem_version.rb'
 Gem::Specification.new do |spec|
   spec.name          = "cocoapods-rome"
   spec.version       = CocoapodsRome::VERSION
-  spec.authors       = ["Boris Bügling"]
+  spec.authors       = ["Boris Bügling"]
   spec.email         = ["boris@icculus.org"]
   spec.summary       = %q{Rome makes it easy to build a list of frameworks for consumption outside of
 Xcode}
@@ -18,7 +18,7 @@ Xcode}
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "cocoapods", '1.8.0.beta.1'
+  spec.add_dependency "cocoapods", '~> 1.9'
   spec.add_dependency "fourflusher", "~> 2.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
